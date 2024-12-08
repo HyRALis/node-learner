@@ -1,29 +1,30 @@
 {
-  "name": "nodejs-starter",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "ts-node app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Petar Trajanoski",
-  "license": "ISC",
-  "description": "Project where I'm learning Node.js with the udemy course \"NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)",
-  "devDependencies": {
-    "@types/node": "^22.10.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.7.2"
-  },
-  "dependencies": {
-    "nodejs-starter": "file:"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HyRALis/node-learner.git"
-  },
-  "bugs": {
-    "url": "https://github.com/HyRALis/node-learner/issues"
-  },
-  "homepage": "https://github.com/HyRALis/node-learner#readme"
+    "name": "nodejs-starter",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon app.ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Petar Trajanoski",
+    "license": "ISC",
+    "description": "Project where I'm learning Node.js with the udemy course \"NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)",
+    "devDependencies": {
+        "@types/node": "^22.10.1",
+        "nodemon": "^3.1.7",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.7.2"
+    },
+    "dependencies": {
+        "nodejs-starter": "file:"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HyRALis/node-learner.git"
+    },
+    "bugs": {
+        "url": "https://github.com/HyRALis/node-learner/issues"
+    },
+    "homepage": "https://github.com/HyRALis/node-learner#readme"
 }
