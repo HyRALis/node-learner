@@ -10,8 +10,7 @@ const mainRouter = (req: http.IncomingMessage, res: http.ServerResponse<http.Inc
         case '/':
             return homePage(res);
         case '/users':
-            usersPage(req, res);
-            break;
+            return usersPage(req, res);
         case '/create-user': {
             if (req.method === 'POST') {
                 return handleCreateUserPostRequest(req, res);
