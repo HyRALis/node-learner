@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Petar Trajanoski",
   "license": "ISC",
-  "description": "",
+  "description": "Project where I'm learning Node.js with the udemy course \"NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)",
   "devDependencies": {
     "@types/node": "^22.10.1",
     "ts-node": "^10.9.2",
@@ -17,5 +17,13 @@
   },
   "dependencies": {
     "nodejs-starter": "file:"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HyRALis/node-learner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HyRALis/node-learner/issues"
+  },
+  "homepage": "https://github.com/HyRALis/node-learner#readme"
 }
