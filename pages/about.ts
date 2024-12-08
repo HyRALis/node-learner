@@ -22,7 +22,7 @@ const aboutPage = (res: http.ServerResponse<http.IncomingMessage>) => {
                 </body>
             </html>
             `);
-    res.end();
+    return res.end();
 };
 
 export default aboutPage;

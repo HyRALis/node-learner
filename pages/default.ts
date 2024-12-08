@@ -20,7 +20,7 @@ const defaultPage = (req: http.IncomingMessage, res: http.ServerResponse<http.In
                 </body>
             </html>
             `);
-    res.end();
+    return res.end();
 };
 
 export default defaultPage;

@@ -1,11 +1,19 @@
 import * as http from 'http';
-
-import pagesRouter from './pages-router';
-import requestsRouter from './request-roter';
+import handleNamePostRequest from '../requestHandlers/handleAboutPost';
+import aboutPage from '../pages/about';
+import defaultPage from '../pages/default';
 
 const mainRouter = (req: http.IncomingMessage, res: http.ServerResponse<http.IncomingMessage>) => {
-    pagesRouter(req, res);
-    requestsRouter(req, res);
+    switch (req.url) {
+        case '/about': {
+            if (req.method === 'POST') {
+                return handleNamePostRequest(req, res);
+            }
+            return aboutPage(res);
+        }
+        default:
+            return defaultPage(req, res);
+    }
 };
 
 export default mainRouter;

@@ -8,7 +8,7 @@ const handleNamePostRequest = (req: http.IncomingMessage, res: http.ServerRespon
     req.on('data', (data) => {
         body.push(data);
     });
-    req.on('end', () => {
+    return req.on('end', () => {
         const parsedBody = Buffer.concat(body).toString();
         name = parsedBody.split('=')[1];
         createFile(name + '.txt', 'My name is ' + name, () => {
@@ -17,8 +17,6 @@ const handleNamePostRequest = (req: http.IncomingMessage, res: http.ServerRespon
             res.end();
         });
     });
-
-    return;
 };
 
 export default handleNamePostRequest;
