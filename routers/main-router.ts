@@ -1,11 +1,26 @@
 import * as http from 'http';
 
-import pagesRouter from './pages-router';
-import requestsRouter from './request-roter';
+import homePage from '../pages/home';
+import defaultPage from '../pages/default';
+import usersPage from '../pages/users';
+import handleCreateUserPostRequest from '../requestHandlers/handleCreateUserPost';
 
 const mainRouter = (req: http.IncomingMessage, res: http.ServerResponse<http.IncomingMessage>) => {
-    pagesRouter(req, res);
-    requestsRouter(req, res);
+    switch (req.url) {
+        case '/':
+            return homePage(res);
+        case '/users':
+            usersPage(req, res);
+            break;
+        case '/create-user': {
+            if (req.method === 'POST') {
+                return handleCreateUserPostRequest(req, res);
+            }
+            return defaultPage(req, res);
+        }
+        default:
+            return defaultPage(req, res);
+    }
 };
 
 export default mainRouter;
