@@ -1,9 +1,9 @@
 import express from 'express';
 
 import aboutPage from '../pages/about';
-import defaultPage from '../pages/default';
 import handleNamePostRequest from '../requestHandlers/handleAboutPost';
 import shopPage from '../pages/shop';
+import homePage from '../pages/home';
 
 const router = express.Router();
 
@@ -18,7 +18,7 @@ router.get('/shop', (_req, res) => {
 });
 
 router.get('/', (req, res) => {
-    defaultPage(req, res);
+    homePage(req, res);
 });
 
 export default router;
