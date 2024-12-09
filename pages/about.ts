@@ -1,3 +1,4 @@
+import { Response } from 'express';
 import * as http from 'http';
 
 /**
@@ -5,9 +6,9 @@ import * as http from 'http';
  * @param {http.ServerResponse<http.IncomingMessage>} res
  */
 
-const aboutPage = (res: http.ServerResponse<http.IncomingMessage>) => {
+const aboutPage = (res: Response) => {
     res.setHeader('Content-Type', 'text/html');
-    res.write(`
+    return res.send(`
         <!DOCTYPE html>
             <html>
                 <head>
@@ -22,7 +23,6 @@ const aboutPage = (res: http.ServerResponse<http.IncomingMessage>) => {
                 </body>
             </html>
             `);
-    return res.end();
 };
 
 export default aboutPage;

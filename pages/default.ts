@@ -1,3 +1,4 @@
+import { Response } from 'express';
 import * as http from 'http';
 
 /**
@@ -7,9 +8,9 @@ import * as http from 'http';
  * @param req The IncomingMessage object from the http module.
  * @param res The ServerResponse object from the http module.
  */
-const defaultPage = (req: http.IncomingMessage, res: http.ServerResponse<http.IncomingMessage>) => {
+const defaultPage = (req: http.IncomingMessage, res: Response) => {
     res.setHeader('Content-Type', 'text/html');
-    res.write(`
+    return res.send(`
         <!DOCTYPE html>
             <html>
                 <head>
@@ -20,7 +21,6 @@ const defaultPage = (req: http.IncomingMessage, res: http.ServerResponse<http.In
                 </body>
             </html>
             `);
-    return res.end();
 };
 
 export default defaultPage;

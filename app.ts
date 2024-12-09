@@ -1,8 +1,24 @@
 import * as http from 'http';
-import mainRouter from './routers/main-router';
+
+import express from 'express';
+
+import defaultPage from './pages/default';
+import aboutPage from './pages/about';
 
 const PORT = 3000;
 
-const server = http.createServer(mainRouter);
+const expressApp = express();
 
-server.listen(PORT);
+expressApp.use('/about', (req, res, next) => {
+    aboutPage(res);
+});
+
+expressApp.use('/', (req, res, next) => {
+    defaultPage(req, res);
+});
+
+expressApp.use((req, res, next) => {
+    console.log('Processing request...');
+});
+
+expressApp.listen(3000);
