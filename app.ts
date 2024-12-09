@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 
 import adminRouter from './routes/admin';
 import shopRouter from './routes/shop';
+import pageNotFoundPage from './pages/404';
 
 const PORT = 3000;
 
@@ -16,7 +17,7 @@ expressApp.use('/admin', adminRouter);
 expressApp.use(shopRouter);
 
 expressApp.use((_req, res) => {
-    res.status(404).send('<h1>Page not found</h1>');
+    pageNotFoundPage(res);
 });
 
 expressApp.listen(PORT);

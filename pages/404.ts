@@ -7,9 +7,9 @@ import { Response } from 'express';
  * @param {http.ServerResponse<http.IncomingMessage>} res
  */
 
-const addProduct = (res: Response) => {
+const pageNotFoundPage = (res: Response) => {
     res.setHeader('Content-Type', 'text/html');
-    return res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
+    return res.status(404).sendFile(path.join(__dirname, '../', 'views', '404.html'));
 };
 
-export default addProduct;
+export default pageNotFoundPage;

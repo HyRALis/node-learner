@@ -7,9 +7,9 @@ import { Response } from 'express';
  * @param {http.ServerResponse<http.IncomingMessage>} res
  */
 
-const addProduct = (res: Response) => {
+const shopPage = (res: Response) => {
     res.setHeader('Content-Type', 'text/html');
-    return res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
+    return res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'));
 };
 
-export default addProduct;
+export default shopPage;
