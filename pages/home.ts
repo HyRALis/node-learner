@@ -1,5 +1,6 @@
 import path from 'path';
 import { Request, Response } from 'express';
+import roodDirPath from '../utils/rootDirPath';
 
 /**
  * Generates a default HTML page as a response to any route that doesn't match
@@ -10,7 +11,7 @@ import { Request, Response } from 'express';
  */
 const homePage = (req: Request, res: Response) => {
     res.setHeader('Content-Type', 'text/html');
-    return res.sendFile(path.join(__dirname, '../', 'views', 'home.html'));
+    return res.sendFile(path.join(roodDirPath(), 'views', 'home.html'));
 };
 
 export default homePage;

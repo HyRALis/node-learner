@@ -1,6 +1,7 @@
 import path from 'path';
 
 import { Response } from 'express';
+import roodDirPath from '../utils/rootDirPath';
 
 /**
  * Renders about page
@@ -9,7 +10,7 @@ import { Response } from 'express';
 
 const addProduct = (res: Response) => {
     res.setHeader('Content-Type', 'text/html');
-    return res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
+    return res.sendFile(path.join(roodDirPath(), 'views', 'add-product.html'));
 };
 
 export default addProduct;
