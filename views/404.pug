@@ -1,21 +1,7 @@
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport",content="width=device-width, initial-scale=1.0")
-        title #{metaTitle}
-        link(rel="stylesheet" href="/css/main.css")
-    
-    body
-        header.main-header
-            nav.main-header__nav
-                ul.main-header__item-list
-                    li.main-header__item
-                        a(href="/shop") Shop
-                    li.main-header__item
-                        a(href="/admin/add-product") Add Product
-                    li.main-header__item
-                        a(href="/about") About
-        main
-            hi Page not found
-            h3 Got to 
-                a(href="/") Home
+extends layouts/main-layout.pug
+
+block bodyContent
+    main
+        hi Page not found
+        h3 Got to 
+            a(href="/") Home
