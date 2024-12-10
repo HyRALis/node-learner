@@ -1,6 +1,4 @@
-import path from 'path';
 import { Request, Response } from 'express';
-import roodDirPath from '../utils/rootDirPath';
 import { NAV_LINKS } from '../utils/consts';
 
 /**
@@ -10,7 +8,7 @@ import { NAV_LINKS } from '../utils/consts';
  * @param req The IncomingMessage object from the http module.
  * @param res The ServerResponse object from the http module.
  */
-const homePage = (req: Request, res: Response) => {
+const homePage = (_req: Request, res: Response) => {
     const homeNavLinks = { ...NAV_LINKS, home: { ...NAV_LINKS.home, isActive: true } };
 
     res.setHeader('Content-Type', 'text/html');

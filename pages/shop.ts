@@ -5,7 +5,7 @@ import { NAV_LINKS } from '../utils/consts';
 
 /**
  * Renders about page
- * @param {http.ServerResponse<http.IncomingMessage>} res
+ * @param {Response} res
  */
 
 const shopPage = (res: Response) => {

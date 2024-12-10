@@ -1,12 +1,9 @@
-import path from 'path';
-
 import { Response } from 'express';
-import roodDirPath from '../utils/rootDirPath';
 import { NAV_LINKS } from '../utils/consts';
 
 /**
  * Renders about page
- * @param {http.ServerResponse<http.IncomingMessage>} res
+ * @param {Response} res
  */
 
 const addProduct = (res: Response) => {

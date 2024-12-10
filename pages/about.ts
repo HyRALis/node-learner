@@ -1,11 +1,9 @@
-import path from 'path';
-
 import { Response } from 'express';
 import { NAV_LINKS } from '../utils/consts';
 
 /**
  * Renders about page
- * @param {http.ServerResponse<http.IncomingMessage>} res
+ * @param {Response} res
  */
 
 const aboutPage = (res: Response) => {
