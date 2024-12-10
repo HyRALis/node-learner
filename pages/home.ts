@@ -1,6 +1,7 @@
 import path from 'path';
 import { Request, Response } from 'express';
 import roodDirPath from '../utils/rootDirPath';
+import { NAV_LINKS } from '../utils/consts';
 
 /**
  * Generates a default HTML page as a response to any route that doesn't match
@@ -10,8 +11,10 @@ import roodDirPath from '../utils/rootDirPath';
  * @param res The ServerResponse object from the http module.
  */
 const homePage = (req: Request, res: Response) => {
+    const homeNavLinks = { ...NAV_LINKS, home: { ...NAV_LINKS.home, isActive: true } };
+
     res.setHeader('Content-Type', 'text/html');
-    return res.render('home', { metaTitle: 'Home' });
+    return res.render('home', { metaTitle: 'Home', navLinks: Object.values(homeNavLinks) });
 };
 
 export default homePage;

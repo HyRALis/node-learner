@@ -1,7 +1,7 @@
 import path from 'path';
 
 import { Response } from 'express';
-import roodDirPath from '../utils/rootDirPath';
+import { NAV_LINKS } from '../utils/consts';
 
 /**
  * Renders about page
@@ -9,8 +9,10 @@ import roodDirPath from '../utils/rootDirPath';
  */
 
 const aboutPage = (res: Response) => {
+    const aboutNavLinks = { ...NAV_LINKS, about: { ...NAV_LINKS.about, isActive: true } };
+
     res.setHeader('Content-Type', 'text/html');
-    return res.render('about', { metaTitle: 'About' });
+    return res.render('about', { metaTitle: 'About', navLinks: Object.values(aboutNavLinks) });
 };
 
 export default aboutPage;

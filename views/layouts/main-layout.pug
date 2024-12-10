@@ -9,10 +9,7 @@ html(lang="en")
         header.main-header  
             nav.main-header__nav 
                 ul.main-header__item-list 
-                    li.main-header__item 
-                        a(href="/shop") Shop
-                    li.main-header__item 
-                        a(href="/admin/add-product") Add Product
-                    li.main-header__item 
-                        a(href="/about") About
+                    each navLink in navLinks
+                        li.main-header__item 
+                            a(href=(navLink.path), class=(navLink.isActive ? 'active' : '')) #{navLink.title}
         block bodyContent

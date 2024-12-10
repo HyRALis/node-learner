@@ -1,7 +1,5 @@
-import path from 'path';
-
 import { Response } from 'express';
-import roodDirPath from '../utils/rootDirPath';
+import { NAV_LINKS } from '../utils/consts';
 
 /**
  * Renders about page
@@ -9,8 +7,10 @@ import roodDirPath from '../utils/rootDirPath';
  */
 
 const pageNotFoundPage = (res: Response) => {
+    const pnpNavLinks = NAV_LINKS;
+
     res.setHeader('Content-Type', 'text/html');
-    return res.render('404', { metaTitle: 'Page not found' });
+    return res.render('404', { metaTitle: 'Page not found', navLinks: Object.values(pnpNavLinks) });
 };
 
 export default pageNotFoundPage;

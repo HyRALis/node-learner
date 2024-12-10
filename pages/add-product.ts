@@ -2,6 +2,7 @@ import path from 'path';
 
 import { Response } from 'express';
 import roodDirPath from '../utils/rootDirPath';
+import { NAV_LINKS } from '../utils/consts';
 
 /**
  * Renders about page
@@ -9,8 +10,10 @@ import roodDirPath from '../utils/rootDirPath';
  */
 
 const addProduct = (res: Response) => {
+    const addProductNavLinks = { ...NAV_LINKS, addProduct: { ...NAV_LINKS.addProduct, isActive: true } };
+
     res.setHeader('Content-Type', 'text/html');
-    return res.render('add-product', { metaTitle: 'Add Product' });
+    return res.render('add-product', { metaTitle: 'Add Product', navLinks: Object.values(addProductNavLinks) });
 };
 
 export default addProduct;
