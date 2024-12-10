@@ -19,8 +19,11 @@
     },
     "dependencies": {
         "body-parser": "^1.20.3",
+        "ejs": "^3.1.10",
         "express": "^4.21.2",
-        "nodejs-starter": "file:"
+        "express-handlebars": "^8.0.1",
+        "nodejs-starter": "file:",
+        "pug": "^3.0.3"
     },
     "repository": {
         "type": "git",

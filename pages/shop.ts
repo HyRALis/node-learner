@@ -1,7 +1,6 @@
-import path from 'path';
-
 import { Response } from 'express';
-import roodDirPath from '../utils/rootDirPath';
+
+import { products } from '../routes/admin';
 
 /**
  * Renders about page
@@ -10,7 +9,8 @@ import roodDirPath from '../utils/rootDirPath';
 
 const shopPage = (res: Response) => {
     res.setHeader('Content-Type', 'text/html');
-    return res.sendFile(path.join(roodDirPath(), 'views', 'shop.html'));
+
+    return res.render('shop', { metaTitle: 'My shop', products: products.filter((product) => product !== '') });
 };
 
 export default shopPage;

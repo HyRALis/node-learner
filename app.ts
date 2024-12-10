@@ -12,6 +12,9 @@ const PORT = 3000;
 
 const expressApp = express();
 
+expressApp.set('view engine', 'pug');
+expressApp.set('views', 'views');
+
 expressApp.use(bodyParser.urlencoded({ extended: false }));
 expressApp.use(express.static(path.join(roodDirPath(), 'public')));
 

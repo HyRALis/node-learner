@@ -11,7 +11,7 @@ import roodDirPath from '../utils/rootDirPath';
  */
 const homePage = (req: Request, res: Response) => {
     res.setHeader('Content-Type', 'text/html');
-    return res.sendFile(path.join(roodDirPath(), 'views', 'home.html'));
+    return res.render('home', { metaTitle: 'Home' });
 };
 
 export default homePage;

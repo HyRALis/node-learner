@@ -10,7 +10,7 @@ import roodDirPath from '../utils/rootDirPath';
 
 const addProduct = (res: Response) => {
     res.setHeader('Content-Type', 'text/html');
-    return res.sendFile(path.join(roodDirPath(), 'views', 'add-product.html'));
+    return res.render('add-product', { metaTitle: 'Add Product' });
 };
 
 export default addProduct;

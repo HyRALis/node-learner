@@ -10,7 +10,7 @@ import roodDirPath from '../utils/rootDirPath';
 
 const aboutPage = (res: Response) => {
     res.setHeader('Content-Type', 'text/html');
-    return res.sendFile(path.join(roodDirPath(), 'views', 'about.html'));
+    return res.render('about', { metaTitle: 'About' });
 };
 
 export default aboutPage;

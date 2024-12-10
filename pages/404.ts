@@ -10,7 +10,7 @@ import roodDirPath from '../utils/rootDirPath';
 
 const pageNotFoundPage = (res: Response) => {
     res.setHeader('Content-Type', 'text/html');
-    return res.status(404).sendFile(path.join(roodDirPath(), 'views', '404.html'));
+    return res.render('404', { metaTitle: 'Page not found' });
 };
 
 export default pageNotFoundPage;
