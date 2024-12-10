@@ -1,9 +1,9 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title #{metaTitle}
-        link(rel="stylesheet" href="/css/main.css")
+        link(rel="stylesheet", href="/css/main.css")
     body(style="width: 100vw; margin: 0; padding: 0")
         header.main-header
             nav.main-header__nav
@@ -16,7 +16,7 @@ html(lang="en")
                         a(href="/about") About
         main(style="display: flex; justify-content: space-between; align-items: center; flex-direction: column")
             h1 Add Product
-            form.add-product-form(action="/admin/add-product" method="POST")
-                input.add-product-form__title(type="text" name="title")
+            form.add-product-form(action="/admin/add-product", method="POST")
+                input.add-product-form__title(type="text", name="title")
                 button.add-product-form__button(type="submit") Submit
 
