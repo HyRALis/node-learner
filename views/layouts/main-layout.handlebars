@@ -1,0 +1,27 @@
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <title>{{metaTitle}}</title>
+        <link rel='stylesheet' href='/css/main.css' />
+        {{{styles}}}
+    </head>
+    <body>
+        <header class='main-header'>
+            <nav class='main-header__nav'>
+                <ul class='main-header__item-list'>
+                    {{#each navLinks}}
+                        <li class='main-header__item'>
+                            <a href='{{ this.path }}' class='{{#if this.isActive}}active{{/if}}'>
+                                {{this.title}}
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </nav>
+        </header>
+
+        {{{ body }}}
+
+    </body>
+</html>
