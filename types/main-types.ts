@@ -3,3 +3,5 @@ export interface INavLink {
     path: string;
     isActive: boolean;
 }
+
+export type IStylesheets = string[];
