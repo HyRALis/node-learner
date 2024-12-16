@@ -1,0 +1,13 @@
+<header class="main-header">
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+            <% navLinks.forEach((navLink) => { %>
+                <li class="main-header__item">
+                    <a href="<%= navLink.path %>" class="<%= navLink.isActive ? 'active' : ''  %>"> 
+                        <%=navLink.title %>
+                    </a>
+                </li>
+            <% }) %>
+        </ul>
+    </nav>
+</header>

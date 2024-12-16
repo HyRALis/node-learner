@@ -2,7 +2,7 @@ import path from 'path';
 import express from 'express';
 
 import bodyParser from 'body-parser';
-import { engine } from 'express-handlebars';
+// import { engine } from 'express-handlebars';
 
 import adminRouter from './routes/admin';
 import shopRouter from './routes/shop';
@@ -13,8 +13,7 @@ import { PORT } from './utils/config';
 
 const expressApp = express();
 
-expressApp.engine('handlebars', engine({ layoutsDir: 'views/layouts', defaultLayout: 'main-layout' }));
-expressApp.set('view engine', 'handlebars');
+expressApp.set('view engine', 'ejs');
 expressApp.set('views', 'views');
 
 expressApp.use(bodyParser.urlencoded({ extended: false }));
