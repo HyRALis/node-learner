@@ -1,7 +1,7 @@
 import { Response } from 'express';
 
 import { NAV_LINKS } from '../consts';
-import { products } from '../../controllers/products';
+import { Product } from '../../models/product';
 
 /**
  * Renders about page
@@ -14,8 +14,9 @@ const shopPage = (res: Response) => {
     res.setHeader('Content-Type', 'text/html');
     return res.render('shop', {
         metaTitle: 'My shop',
-        products: products.filter((product) => product !== ''),
-        navLinks: Object.values(shopNavLinks)
+        products: Product.fetchAll(),
+        navLinks: Object.values(shopNavLinks),
+        stylesheets: []
     });
 };
 

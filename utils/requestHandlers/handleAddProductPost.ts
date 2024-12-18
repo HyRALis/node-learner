@@ -1,7 +1,9 @@
 import { Request, Response } from 'express';
+import { Product } from '../../models/product';
 
-const handleAddProductPostRequest = (req: Request, res: Response, products: string[]) => {
-    products.push(req.body.title);
+const handleAddProductPostRequest = (req: Request, res: Response) => {
+    const product = new Product(req.body.title);
+    product.save();
     res.redirect('/admin/add-product');
 };
 

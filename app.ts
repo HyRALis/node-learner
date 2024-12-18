@@ -7,8 +7,9 @@ import adminRouter from './routes/admin';
 import shopRouter from './routes/shop';
 import roodDirPath from './utils/rootDirPath';
 
-import { PORT } from './utils/config';
 import { get404Page } from './controllers/error';
+
+import { PORT } from './utils/config';
 
 const expressApp = express();
 
