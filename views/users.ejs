@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('includes/main-head.ejs') %>
+    <body>
+        <%- include('includes/main-nav.ejs') %>
+        <main>
+            <h1>Welcome Users Page ! :D</h1>
+
+            <ul class="users-list">
+                <% users.forEach((user) => { %>
+                    <li class="users-list__item"><%= user %></li>
+                <% }) %>
+            </ul>
+        </main>
+    </body>
+</html>

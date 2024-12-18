@@ -2,10 +2,8 @@ import path from 'path';
 import express from 'express';
 
 import bodyParser from 'body-parser';
-// import { engine } from 'express-handlebars';
 
-import adminRouter from './routes/admin';
-import shopRouter from './routes/shop';
+import mainRouter from './routes';
 import pageNotFoundPage from './pages/404';
 import roodDirPath from './utils/rootDirPath';
 
@@ -19,9 +17,7 @@ expressApp.set('views', 'views');
 expressApp.use(bodyParser.urlencoded({ extended: false }));
 expressApp.use(express.static(path.join(roodDirPath(), 'public')));
 
-expressApp.use('/admin', adminRouter);
-
-expressApp.use(shopRouter);
+expressApp.use(mainRouter);
 
 expressApp.use((_req, res) => {
     pageNotFoundPage(res);

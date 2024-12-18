@@ -1,0 +1,40 @@
+main {
+    padding: 2rem;
+}
+
+h1 {
+    color: yellow;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.users-list {
+    width: 20rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.users-list__item {
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: yellow;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.users-list__item:last-of-type {
+    margin-bottom: 0;
+}

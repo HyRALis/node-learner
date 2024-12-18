@@ -5,3 +5,5 @@ export interface INavLink {
 }
 
 export type IStylesheets = string[];
+
+export type IUsers = string[];

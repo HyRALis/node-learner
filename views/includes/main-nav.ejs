@@ -4,7 +4,7 @@
             <% navLinks.forEach((navLink) => { %>
                 <li class="main-header__item">
                     <a href="<%= navLink.path %>" class="<%= navLink.isActive ? 'active' : ''  %>"> 
-                        <%=navLink.title %>
+                        <%= navLink.title %>
                     </a>
                 </li>
             <% }) %>

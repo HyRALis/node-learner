@@ -12,7 +12,7 @@ const homePage = (_req: Request, res: Response) => {
     const homeNavLinks = { ...NAV_LINKS, home: { ...NAV_LINKS.home, isActive: true } };
 
     res.setHeader('Content-Type', 'text/html');
-    return res.render('home', { metaTitle: 'Home', navLinks: Object.values(homeNavLinks) });
+    return res.render('home', { metaTitle: 'Home', navLinks: Object.values(homeNavLinks), stylesheets: [] });
 };
 
 export default homePage;
