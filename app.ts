@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 
 import adminRouter from './routes/admin';
 import shopRouter from './routes/shop';
-import pageNotFoundPage from './pages/404';
+import pageNotFoundPage from './utils/pages/404';
 import roodDirPath from './utils/rootDirPath';
 
 import { PORT } from './utils/config';
