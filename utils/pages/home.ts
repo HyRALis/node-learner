@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { NAV_LINKS } from '../utils/consts';
+import { NAV_LINKS } from '../consts';
 
 /**
  * Generates a default HTML page as a response to any route that doesn't match

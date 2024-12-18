@@ -1,5 +1,5 @@
 import { Response } from 'express';
-import { NAV_LINKS } from '../utils/consts';
+import { NAV_LINKS } from '../consts';
 
 /**
  * Renders about page
