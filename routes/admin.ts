@@ -1,14 +1,12 @@
 import express from 'express';
-import addProduct from '../utils/pages/add-product';
-import handleAddProductPostRequest from '../utils/requestHandlers/handleAddProductPost';
+import { getAddProductPage, postAddProduct } from '../controllers/products';
 
 const router = express.Router();
-export const products: string[] = [];
 
-router.get('/add-product', (_req, res) => {
-    addProduct(res);
+router.get('/add-product', (req, res) => {
+    getAddProductPage(req, res);
 });
 
-router.post('/add-product', (req, res) => handleAddProductPostRequest(req, res, products));
+router.post('/add-product', (req, res) => postAddProduct(req, res));
 
 export default router;

@@ -2,7 +2,6 @@ import path from 'path';
 import express from 'express';
 
 import bodyParser from 'body-parser';
-// import { engine } from 'express-handlebars';
 
 import adminRouter from './routes/admin';
 import shopRouter from './routes/shop';
@@ -10,6 +9,7 @@ import pageNotFoundPage from './utils/pages/404';
 import roodDirPath from './utils/rootDirPath';
 
 import { PORT } from './utils/config';
+import { get404Page } from './controllers/error';
 
 const expressApp = express();
 
@@ -23,8 +23,6 @@ expressApp.use('/admin', adminRouter);
 
 expressApp.use(shopRouter);
 
-expressApp.use((_req, res) => {
-    pageNotFoundPage(res);
-});
+expressApp.use(get404Page);
 
 expressApp.listen(PORT);

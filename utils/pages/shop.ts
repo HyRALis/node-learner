@@ -1,7 +1,7 @@
 import { Response } from 'express';
 
 import { NAV_LINKS } from '../consts';
-import { products } from '../../routes/admin';
+import { products } from '../../controllers/products';
 
 /**
  * Renders about page
