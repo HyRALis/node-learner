@@ -1,9 +1,9 @@
 import express from 'express';
 
-import aboutPage from '../pages/about';
-import handleNamePostRequest from '../requestHandlers/handleAboutPost';
-import shopPage from '../pages/shop';
-import homePage from '../pages/home';
+import aboutPage from '../utils/pages/about';
+import handleNamePostRequest from '../utils/requestHandlers/handleAboutPost';
+import shopPage from '../utils/pages/shop';
+import homePage from '../utils/pages/home';
 
 const router = express.Router();
 

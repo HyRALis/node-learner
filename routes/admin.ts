@@ -1,6 +1,6 @@
 import express from 'express';
-import addProduct from '../pages/add-product';
-import handleAddProductPostRequest from '../requestHandlers/handleAddProductPost';
+import addProduct from '../utils/pages/add-product';
+import handleAddProductPostRequest from '../utils/requestHandlers/handleAddProductPost';
 
 const router = express.Router();
 export const products: string[] = [];
